@@ -1,0 +1,15 @@
+site_name: django-admin-tabs
+
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - python
+        - bash
+
+nav:
+  - django-admin-tabs: index.md
+  - tutorials.md
+  - How-To Guides: how-to-guides.md
+  - reference.md
+  - explanation.md

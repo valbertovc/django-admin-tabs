@@ -1,0 +1,9 @@
+{% load i18n %}
+{% if choices %}
+  <ul>
+    {% for choice in choices %}
+        <li{% if choice.selected %} class="selected"{% endif %}>
+        <a href="{{ choice.query_string|iriencode }}">{{ choice.display }}</a></li>
+    {% endfor %}
+  </ul>
+{% endif %}

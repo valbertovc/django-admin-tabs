@@ -1,0 +1,73 @@
+[build-system]
+requires = ["poetry-core>=1.7.1"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "django-admin-tabs"
+version = "0.0.1"
+description = "It generates tabs for Django admin's changelist"
+authors = ["Valberto Carneiro <valbertovc@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/valbertovc/django-admin-tabs"
+classifiers=[
+    "Development Status :: 4 - Beta",
+    "Framework :: Django :: 2",
+    "Framework :: Django :: 2.2",
+    "Framework :: Django :: 3",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4",
+    "Framework :: Django :: 4.1",
+    "Framework :: Django :: 5.0",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+keywords=["django", "admin", "filter", "tabs"]
+packages = [
+    { include = "admin_tabs" }
+]
+include = [
+"LICENSE",
+]
+
+[tool.poetry.urls]
+"Homepage" = "https://valbertovc.github.io/django-admin-tabs/"
+"Bug Tracker" = "https://github.com/valbertovc/django-admin-tabs/issues"
+"Changelog" = "https://github.com/valbertovc/django-admin-tabs/releases"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4"
+Django = ">=2.2.0,>=3.0.0,>=4.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.2.2"
+tox = "^4.4.5"
+coverage = {extras = ["toml"], version = "^7.1.0"}
+mkdocs = "^1.4.2"
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = [
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "import-error",
+]
+
+[tool.coverage.paths]
+source = ["admin_tabs"]
+
+[tool.coverage.run]
+branch = true
+source = ["admin_tabs"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
