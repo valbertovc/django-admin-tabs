@@ -10,8 +10,6 @@ provided in this project.
 Consider the scenario below:
 
 ```python
-import admin_tabs
-from django.db import models
 from django.contrib.auth import get_user_model
 from django.contrib import admin
 
